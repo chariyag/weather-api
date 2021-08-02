@@ -1,0 +1,27 @@
+server:
+  port: 8090
+  servlet:
+    contextPath: /weather-api
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+
+weathermap:
+  service:
+    url: http://api.openweathermap.org/data/2.5/weather
+    name: weather-map-api
+
+apikey:
+  hourly:
+    limit: 5
+
