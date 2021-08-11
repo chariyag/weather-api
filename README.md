@@ -2,7 +2,7 @@
 
 This api is to get weather information based on open weather map api. Need valid apikey country and city to populate weather information.
 ## Tech Stack
-* Java 1.8
+* Java 11
 * Spring JPA
 * Spring Boot
 * Junit 5
