@@ -21,7 +21,7 @@ public class ApiKeyServiceTest {
 
     @BeforeEach
     public  void init(){
-        ReflectionTestUtils.setField(apiKeyService, "apikeyHourlyLimit", 5);
+        ReflectionTestUtils.setField(apiKeyService, "apikeyHourlyLimit", 1);
     }
 
     @Test
@@ -33,5 +33,12 @@ public class ApiKeyServiceTest {
     @Test
     public void validateApikey_should_throw_exception_ForInvalidApikey(){
         Assertions.assertThrows(ValidationException.class,()->apiKeyService.validateApikey("invalid"));
+    }
+
+    @Test
+    public void validateApikey_should_throw_exception_For_HourlyLimit_Exceed(){
+        apiKeyService.validateApikey("0338ed134d5eb5035965aca666040d69");
+        ValidationException validationException=Assertions.assertThrows(ValidationException.class,()->apiKeyService.validateApikey("0338ed134d5eb5035965aca666040d69"));
+        Assertions.assertEquals("Hourly limit has been exceeded",validationException.getMessage());
     }
 }

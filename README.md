@@ -20,7 +20,9 @@ This api is to get weather information based on open weather map api. Need valid
   * http://localhost:8090/weather-api/swagger-ui.html
 * ## Curl
   *```curl -X GET "http://localhost:8090/weather-api/weather?apikey=0cea1dab4d277fabb0718fd2f21cb8ea&city=London&country=UK" -H  "accept: */*"```
-
+* ## Unit coverage 100 % report
+  * \target\site\jacoco\index.html
+  
  * ## Api keys for testing
     * 0cea1dab4d277fabb0718fd2f21cb8ea
     * cfee2ae551dc29e00ad70cdf964ea923
@@ -34,7 +36,6 @@ This api is to get weather information based on open weather map api. Need valid
 * Only save weather related information as it's the only relevant to this api.
 
 # Product Backlog
-* Unit test coverage to 100%
 * Integration Test
 * Docker set up configure 
 

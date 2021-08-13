@@ -20,8 +20,8 @@ public class WeatherService {
     private final ApiKeyService apiKeyService;
     private final WeatherMapApiService weatherMapApiService;
     private final WeatherMapper weatherMapper;
-
     private  final WeatherRepository weatherRepository;
+
     public WeatherResponse getWeather(WeatherRequest weatherRequest){
         apiKeyService.validateApikey(weatherRequest.getApikey());
         Optional<WeatherEntity> existingWeather = weatherRepository.findOneByCountryAndCity( weatherRequest.getCountry(),  weatherRequest.getCity());
