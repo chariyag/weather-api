@@ -11,6 +11,7 @@ This api is to get weather information based on open weather map api. Need valid
 * Feign Client
 * H2
 * Maven
+* Rest - assured (Integration Test)
 
 # How to start the application
 - ```mvn clean install```
@@ -22,7 +23,7 @@ This api is to get weather information based on open weather map api. Need valid
   *```curl -X GET "http://localhost:8090/weather-api/weather?apikey=0cea1dab4d277fabb0718fd2f21cb8ea&city=London&country=UK" -H  "accept: */*"```
 * ## Unit coverage 100 % report
   * \target\site\jacoco\index.html
-  
+* ## Integration Test    
  * ## Api keys for testing
     * 0cea1dab4d277fabb0718fd2f21cb8ea
     * cfee2ae551dc29e00ad70cdf964ea923
@@ -36,7 +37,6 @@ This api is to get weather information based on open weather map api. Need valid
 * Only save weather related information as it's the only relevant to this api.
 
 # Product Backlog
-* Integration Test
 * Docker set up configure 
 
 

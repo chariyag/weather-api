@@ -24,7 +24,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(WeatherController.class)
-//@AutoConfigureMockMvc(addFilters = false)
 
 public class WeatherControllerTest {
 
